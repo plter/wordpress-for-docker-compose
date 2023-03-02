@@ -1,3 +1,5 @@
+mkdir -p ./packages
+
 docker-compose exec -t wordpress sh -c "tar czvf /wordpress.tar.gz /var/www/html"
 docker-compose cp wordpress:/wordpress.tar.gz ./packages
 
