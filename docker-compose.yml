@@ -7,8 +7,8 @@ services:
     environment:
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_USER: root
-      WORDPRESS_DB_PASSWORD: TtRBdkJrQ38DxX
-      WORDPRESS_DB_NAME: 61src
+      WORDPRESS_DB_PASSWORD: wordpress_db_pass
+      WORDPRESS_DB_NAME: wordpress
     ports:
       - "80:80"
       - "443:443"
@@ -19,8 +19,8 @@ services:
     image: mariadb:10.10.3-jammy
     restart: always
     environment:
-      MARIADB_DATABASE: 61src
-      MARIADB_ROOT_PASSWORD: TtRBdkJrQ38DxX
+      MARIADB_DATABASE: wordpress
+      MARIADB_ROOT_PASSWORD: wordpress_db_pass
     volumes:
       - "db:/var/lib/mysql"
 
